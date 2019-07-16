@@ -1,0 +1,25 @@
+# mybatis config
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+server:
+  port: 8081
+
+  # datasource config
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver  #在 <version>5.1.46</version>时 为 com.mysql.jdbc.Driver
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 15
+      minimum-idle: 5
+      pool-name: hikariCP
+    url: jdbc:mysql://localhost:3306/my_blog_db?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    name: my-blog-datasource
+    username: anna
+    password: anna
+  thymeleaf:
+    cache: false

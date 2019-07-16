@@ -362,4 +362,12 @@ public class BlogServiceImpl implements BlogService {
         return blogListVOS;
     }
 
+    /**
+     *  尝试直取所有信息
+     * @return
+     */
+    @Override
+    public List<Blog> getAllBlogs(){
+        return blogMapper.findBlogList(null);
+    }
 }

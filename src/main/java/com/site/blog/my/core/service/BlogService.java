@@ -86,4 +86,10 @@ public interface BlogService {
     PageResult getBlogsPageBySearch(String keyword, int page);
 
     BlogDetailVO getBlogDetailBySubUrl(String subUrl);
+
+    /**
+     *  尝试直接获取所有信息
+     * @return
+     */
+    List<Blog> getAllBlogs();
 }

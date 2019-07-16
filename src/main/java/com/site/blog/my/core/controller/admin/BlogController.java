@@ -2,6 +2,7 @@ package com.site.blog.my.core.controller.admin;
 
 import com.site.blog.my.core.config.Constants;
 import com.site.blog.my.core.entity.Blog;
+import com.site.blog.my.core.entity.TestObject;
 import com.site.blog.my.core.service.BlogService;
 import com.site.blog.my.core.service.CategoryService;
 import com.site.blog.my.core.util.MyBlogUtils;
@@ -23,6 +24,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -230,6 +232,22 @@ public class BlogController {
         } else {
             return ResultGenerator.genFailResult("删除失败");
         }
+    }
+
+    /**
+     * 以下为自己测试用
+     *
+     * @return
+     */
+    @PostMapping("/blogs/allBlogs")
+    @ResponseBody
+    public TestObject getAllBlogs() {
+//        if (!confirm) {
+//            return new TestObject(false, "坏起来了", null);
+//        }
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("resInfo", blogService.getAllBlogs());
+        return new TestObject(true, "请求到了", map);
     }
 
 }

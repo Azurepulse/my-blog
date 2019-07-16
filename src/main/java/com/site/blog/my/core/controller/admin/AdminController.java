@@ -47,6 +47,12 @@ public class AdminController {
         return "admin/test";
     }
 
+    /**
+     *  自己测试用 不连数据库的登录
+     * @param map
+     * @param request
+     * @return
+     */
     @PostMapping("/anna")
     @ResponseBody
     public TestObject getTest(@RequestBody Map map,HttpServletRequest request) {

@@ -1,13 +1,13 @@
 package com.site.blog.my.core.entity;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class TestObject {
     public TestObject() {
 
     }
 
-    public TestObject(boolean status, String message, Map additonal) {
+    public TestObject(boolean status, String message, HashMap<String,Object> additonal) {
         this.status = status;
         this.message = message;
         this.additonal = additonal;
@@ -15,7 +15,7 @@ public class TestObject {
 
     private boolean status;
     private String message;
-    private Map additonal;
+    private HashMap<String,Object> additonal;
 
     public boolean isStatus() {
         return status;
@@ -33,11 +33,11 @@ public class TestObject {
         this.message = message;
     }
 
-    public Map getAdditonal() {
+    public HashMap<String,Object> getAdditonal() {
         return additonal;
     }
 
-    public void setAdditonal(Map additonal) {
+    public void setAdditonal(HashMap<String,Object> additonal) {
         this.additonal = additonal;
     }
 }

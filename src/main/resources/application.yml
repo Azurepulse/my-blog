@@ -1,6 +1,9 @@
 # mybatis config
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #控制台输出myBatis信息
+
 server:
   port: 8081
 

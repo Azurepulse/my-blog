@@ -2,20 +2,23 @@ package com.site.blog.my.core.entity;
 
 import java.util.HashMap;
 
+/**
+ * @author ZTY
+ */
 public class TestObject {
     public TestObject() {
 
     }
 
-    public TestObject(boolean status, String message, HashMap<String,Object> additonal) {
+    public TestObject(boolean status, String message, HashMap<String,Object> additional) {
         this.status = status;
         this.message = message;
-        this.additonal = additonal;
+        this.additional = additional;
     }
 
     private boolean status;
     private String message;
-    private HashMap<String,Object> additonal;
+    private HashMap<String,Object> additional;
 
     public boolean isStatus() {
         return status;
@@ -34,10 +37,10 @@ public class TestObject {
     }
 
     public HashMap<String,Object> getAdditonal() {
-        return additonal;
+        return additional;
     }
 
-    public void setAdditonal(HashMap<String,Object> additonal) {
-        this.additonal = additonal;
+    public void setAdditonal(HashMap<String,Object> additional) {
+        this.additional = additional;
     }
 }
